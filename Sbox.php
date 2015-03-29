@@ -2,10 +2,10 @@
 
 class Sbox{
 
-	private static $sBox;
+	public static $sBox;
 
 	// The sBox of AES
-	function __construct(){
+	function __construct(){		
 		$this->sBox = array(
 						0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5, 0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
 				        0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0, 0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
@@ -30,3 +30,33 @@ class Sbox{
 		return $this->sBox[$sBox_key];
 	}
 }
+
+// $val1 = decbin(hexdec('0x7385168e'));
+// echo $val1;
+// echo '<br/>';
+// $val2 = decbin(hexdec('0x10000000'));
+// echo $val2;
+
+// $t1 = "0001 0000 0000 0000 0000 0000 0000 0000";
+// $t2 = "0111 0011 1000 0101 0001 0110 1000 1110";
+
+// $t1_hex = "0x7385168e";
+// $t2_hex = "0x10000000";
+
+// echo $t1_hex << 1;
+
+// $t1_dec = hexdec($t1_hex);
+// $t2_dec = hexdec($t2_hex);
+
+// // $ans_hex = $t1_hex^$t2_hex;
+// // var_dump($ans_hex);
+
+// echo 'the bin of t1 is '.$t1_dec;
+// echo 'the bin of t2 is '.$t2_dec;
+
+// $ans = $t1_dec ^ $t2_dec;
+
+// var_dump(dechex($ans));
+
+
+// echo (decbin(hexdec('0x7385168e')) ^ decbin(hexdec('0x01000000')));
